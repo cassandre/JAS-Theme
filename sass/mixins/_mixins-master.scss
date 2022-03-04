@@ -1,0 +1,62 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+@mixin px2rem($font-size, $base-font-size: 16, $line: $font-size * 1.4) {
+	font-size: $font-size + px; // für den IE8
+	line-height: ($line) + px;
+	font-size: px2rem($font-size, $base-font-size);
+	line-height: ($line / $base-font-size) + rem;
+}
+@function px2rem($font-size, $base-font-size: 16) {
+	@return $font-size / $base-font-size + rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	display: table;
+	line-height: 0;
+	content: "";
+	clear: both;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+@mixin site-width {
+	width: 100vw;
+	padding-left: 10px;
+	padding-right: 10px;
+	@media screen and (min-width: $screen-xs) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	@media screen and (min-width: $screen-md) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	@media screen and (min-width: $screen-md) {
+		width: 90vw;
+	}
+	@media screen and (min-width: $screen-lg) {
+		width: 80vw;
+	}
+	@media screen and (min-width: $screen-xl) {
+		width: 70vw;
+	}
+}

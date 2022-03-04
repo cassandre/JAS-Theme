@@ -1,0 +1,30 @@
+$color__jas-lila: #3C3C82;
+$color__jas-lila-hell: #BBA7CC;
+$color__jas-lila-dunkel: darken($color__jas-lila, 10%);
+$color__jas_gelb: #F0B400;
+$color__jas_gelb-hell: lighten($color__jas_gelb, 30%);
+$color__jas-gruen: #008C82;
+$color__jas-gruen-hell: #B8CDCF;
+$color__jas-gruen-dunkel: darken ($color__jas-gruen, 10%);
+
+$color__background-body: #fff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: $color__jas-gruen;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: lighten($color__jas-lila, 10%);
+$color__link-visited: $color__link;
+$color__link-hover: $color__jas_gelb;
+$color__text-main: #404040;
+$color__headings: $color__jas-lila;
+
+$color__border-button: $color__jas-gruen-dunkel;
+$color__border-button-hover: $color__jas-gruen-hell $color__jas-gruen-dunkel $color__jas-gruen-dunkel $color__jas-gruen-hell;
+$color__border-button-focus: $color__border-button-hover;
+$color__border-input: #ccc;
+$color__border-abbr: #666;

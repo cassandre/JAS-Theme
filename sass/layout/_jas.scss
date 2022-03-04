@@ -1,0 +1,343 @@
+.school-overview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .school-panel {
+    //background: $color__jas_gruen-hell;
+    box-shadow: 0 1px 2px rgba(0,0,0,.3);
+    flex-basis: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    //align-items: flex-end;
+    justify-content: space-between;
+    overflow: hidden;
+    @media screen and (min-width: $screen-xs) {
+      flex-basis: 49%;
+    }
+    @media screen and (min-width: $screen-sm) {
+      flex-basis: 32%;
+    }
+    @media screen and (min-width: $screen-md) {
+      flex-basis: 24%;
+    }
+  }
+  .school-info {
+    padding: 5px 10px 10px;
+    flex-basis: 100px;
+    flex-grow: 1;
+    background-color: #fff;
+    ul {
+      padding-left: 16px;
+    }
+    li {
+      @include px2rem(15);
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+  .school-name {
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .school-image {
+    background-color: #fff;
+    height: 200px;
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .dummy-school {
+      display: block;
+      height: 200px;
+      text-align: center;
+      padding: 40px;
+      color: $color__jas-gruen;
+      background: $color__jas_gruen-hell;
+    }
+  }
+}
+
+.project-overview {
+  @extend .school-overview;
+  .project-panel {
+    @extend .school-panel;
+    max-width: 200px;
+  }
+  .project-info {
+    @extend .school-info;
+    min-height: 90px;
+    flex-basis: auto;
+    flex-grow: 1;
+    -moz-hyphens: auto;
+    -o-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    h1 {
+      font-family: $font__main;
+      @include px2rem(16);
+      letter-spacing: normal;
+    }
+    p {
+      @include px2rem(15);
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  .project-name {
+    @extend .school-name;
+  }
+  .project-image {
+    @extend .school-image;
+    height: 120px;
+    img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+    .dummy-project {
+      @extend .dummy-school;
+      height: 120px;
+      padding: 20px;
+      color: $color__jas-gelb;
+      background: lighten($color__jas_gelb-hell, 10%);
+    }
+  }
+}
+
+.staff-overview {
+  @extend .school-overview;
+  justify-content: space-evenly;
+  .staff-panel {
+    @extend .school-panel;
+    //max-width: 200px;
+  }
+  .staff-info {
+    @extend .school-info;
+    min-height: 90px;
+    flex-basis: auto;
+    flex-grow: 1;
+    -moz-hyphens: auto;
+    -o-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    h1 {
+      font-family: $font__main;
+      @include px2rem(16);
+      letter-spacing: normal;
+    }
+    p {
+      @include px2rem(15);
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  .staff-name {
+    @extend .school-name;
+  }
+  .staff-image {
+    @extend .school-image;
+    //height: 120px;
+    img {
+      object-fit: contain;
+      background: lighten($color__jas_gruen-hell, 10%);
+    }
+    .dummy-staff {
+      @extend .dummy-school;
+      //height: 120px;
+      padding: 30px;
+      color: $color__jas-lila;
+      background: lighten($color__jas_gruen-hell, 10%);
+    }
+  }
+}
+
+/*
+ * Single School
+ */
+
+.single-school {
+  .entry-content {
+    @media screen and (min-width: $screen-sm) {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto 1fr;
+    }
+    @media screen and (min-width: $screen-md) {
+      grid-template-columns: 3fr 1fr;
+    }
+    .post-thumbnail {
+      @media screen and (min-width: $screen-xs) {
+        float: right;
+        max-width: 50%;
+      }
+      @media screen and (min-width: $screen-sm) {
+        float: none;
+        max-width: none;
+        grid-column: 2 / 3;
+        grid-row:    1 / 2;
+        padding-left: 10px;
+        padding-bottom: 20px;
+      }
+      @media screen and (min-width: $screen-md) {
+        padding-left: 12px;
+      }
+    }
+    .content-school {
+      @media screen and (min-width: $screen-sm) {
+        grid-column: 1 / 2;
+        grid-row:    1 / 3;
+        padding-right: 10px;
+      }
+      @media screen and (min-width: $screen-md) {
+        padding-right: 12px;
+      }
+      @media screen and (min-width: $screen-lg) {
+        padding-right: 15px;
+      }
+      h2.circle {
+        margin-top: 30px;
+      }
+    }
+    .sidebar-school {
+      @media screen and (min-width: $screen-sm) {
+        grid-column: 2 / 3;
+        grid-row:    2 / 3;
+        padding-left: 10px;
+      }
+      @media screen and (min-width: $screen-md) {
+        padding-left: 12px;
+      }
+      @media screen and (min-width: $screen-lg) {}
+      .school-url {
+        margin-bottom: 20px;
+      }
+      .school-contact {
+        font-size: px2rem(15);
+        //background-color: lighten($color__jas_lila-hell, 10%);
+        //background-color: $color__jas_gelb-hell;
+        border: 1px solid $color__jas_lila-hell;
+        box-shadow: 0 1px 2px rgba(0,0,0,.3);
+        padding: 15px;
+        .school-contact-item:not(:first-child) {
+          padding: 10px 0;
+          border-top: 1px solid $color__jas-gruen;
+        }
+        h2 {
+          margin-top: 0;
+        }
+        h3 {
+          font-size: px2rem(18);
+          margin-bottom: .25em;
+        }
+        ul {
+          padding-left: 20px;
+        }
+      }
+      .contact-name {
+        font-weight: bold;
+        font-size: px2rem(17);
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+    .school-project {
+      padding: 10px 0;
+      @media screen and (min-width: $screen-md) {
+        display: flex;
+        flex-direction: row;
+      }
+      .project-thumbnail {
+        @media screen and (min-width: $screen-xs) {
+          float: left;
+          margin-right: 20px;
+        }
+        @media screen and (min-width: $screen-md) {
+          float: none;
+          flex: 1 0 150px;
+        }
+      }
+      h3 {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+/*
+ * Single Contact
+ */
+
+.single-staff {
+  .site-content {
+    max-width: 800px;
+  }
+  .post-thumbnail {
+    @media screen and (min-width: $screen-xs) {
+      float: right;
+      max-width: 50%;
+      margin-left: 20px;
+    }
+  }
+  .school-url {
+    text-decoration: none;
+    font-weight: bold;
+  }
+  h2 {
+    margin-bottom: 8px;
+  }
+}
+
+/*
+ * Single Project
+ */
+
+.single-project {
+  .site-content {
+    max-width: 800px;
+  }
+  .post-thumbnail {
+    float: left;
+    width: 50%;
+    @media screen and (min-width: $screen-xs) {
+      width: auto;
+      max-width: 50%;
+      float: right;
+      margin-left: 20px;
+    }
+  }
+  h2 {
+    margin-bottom: 8px;
+  }
+  .project-info {
+    margin-bottom: 20px;
+    float: right;
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 5px;
+    @media screen and (min-width: $screen-xs) {
+      clear: right;
+      float: right;
+      width: 300px;
+      max-width: 50%;
+      margin-left: 20px;
+      border-left: 1px solid $color__background-hr;
+      padding-left: 20px;
+      padding-right: 0px;
+    }
+  }
+  .content-project {
+    clear: both;
+    @media screen and (min-width: $screen-xs) {
+      clear: none;
+    }
+  }
+}

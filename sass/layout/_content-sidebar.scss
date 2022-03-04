@@ -1,0 +1,66 @@
+.site-content {
+	@include site-width;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	@media screen and (min-width: $screen-sm) {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	@media screen and (min-width: $screen-lg) {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		min-height: 300px;
+	}
+	.home:not(.no-boxes) & {
+		@media screen and (min-width: $screen-xs) {
+			padding-top: 0px;
+		}
+		@media screen and (max-width: $screen-xs - 1) {
+			//padding-top: 160px;
+		}
+	}
+	//.home.no-boxes & {
+	//	@media screen and (min-width: $screen-xs) {
+	//		padding-top: 0px;
+	//	}
+	//}
+}
+
+.content-area {
+	max-width: 100%;
+	@media screen and (min-width: $screen-sm) {
+		flex: 2;
+	}
+	@media screen and (min-width: $screen-md) {
+		flex: 3;
+	}
+	//float: left;
+	//margin: 0 (-$size__site-sidebar) 0 0;
+	//width: $size__site-main;
+}
+
+.site-main {
+	//margin: 0 $size__site-sidebar 0 0;
+}
+
+.site-content .widget-area {
+	@media screen and (min-width: $screen-sm) {
+		flex: 1;
+	}
+	@media screen and (min-width: $screen-md) {
+		flex: 1;
+	}
+	//float: right;
+	//overflow: hidden;
+	//width: $size__site-sidebar;
+}
+
+//.site-footer {
+//	clear: both;
+//	width: $size__site-main;
+//}
+
+@import "no-sidebar";

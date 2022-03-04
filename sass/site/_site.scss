@@ -1,0 +1,15 @@
+@import "../layout/jas";
+@import "../layout/content-sidebar";
+// @import "../layout/sidebar-content";
+@import "../layout/header";
+@import "../layout/footer";
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+@import "primary/comments";

@@ -1,0 +1,201 @@
+# Copyright (C) 2017 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: _s 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2020-04-01 20:04+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2020-04-01 20:04+0000\n"
+"Last-Translator: Barbara <info@barbara-bothe.de>\n"
+"Language-Team: Deutsch\n"
+"X-Generator: Loco https://localise.biz/\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Loco-Version: 2.3.1; wp-5.4"
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Hoppla, dieses Seite wurde nicht gefunden."
+
+#: 404.php:22
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Hier wurde leider kein passender Inhalt gefunden. Versuchen Sie es doch mit "
+"der Suche."
+
+#: 404.php:31
+msgid "Most Used Categories"
+msgstr "Häufigste Kategorien"
+
+#. translators: %1$s: smiley
+#: 404.php:47
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Hier können Sie die monatlichen Archive durchsuchen."
+
+#. translators: 1: title.
+#: comments.php:35
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr "Ein Kommentar zu “%1$s”"
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:41
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s Kommentar zu &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s Kommentare zu &ldquo;%2$s&rdquo;"
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr "Die Kommentarfunktion ist geschlossen."
+
+#: functions.php:48
+msgid "Primary"
+msgstr "Hauptmenü"
+
+#: functions.php:109
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: functions.php:111 functions.php:120 functions.php:129
+msgid "Add widgets here."
+msgstr "Hier Widgets einfügen."
+
+#: functions.php:118
+msgid "Info Area"
+msgstr ""
+
+#: functions.php:127
+msgid "Footer"
+msgstr ""
+
+#: header.php:25
+msgid "Skip to content"
+msgstr "Zum Seiteninhalt springen"
+
+#: header.php:33
+msgid "Primary Menu"
+msgstr "Hauptmenü"
+
+#. translators: %s: search query.
+#: search.php:22
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Suchergebnisse für \"%s\""
+
+#. translators: %s: post date.
+#: inc/template-tags.php:29
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "%s"
+
+#. translators: %s: post author.
+#: inc/template-tags.php:45
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "von %s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:62
+msgid ", "
+msgstr ", "
+
+#. translators: 1: list of categories.
+#: inc/template-tags.php:65
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Kategorien: %1$s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:69
+msgctxt "list item separator"
+msgid ", "
+msgstr ", "
+
+#. translators: 1: list of tags.
+#: inc/template-tags.php:72
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Schlagwörter: %1$s"
+
+#. translators: %s: post title
+#: inc/template-tags.php:82
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "<span class=\"screen-reader-text\">%s</span> kommentieren"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:99 template-parts/content-page.php:37
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "<span class=\"screen-reader-text\">%s</span> bearbeiten"
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Nichts gefunden"
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Leider wurden keine Ergebnisse zu Ihrer Suche gefunden. Bitte versuchen Sie "
+"es mit anderen Suchbegriffen."
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Dieser Inhal existiert wohl nicht. Vielleicht hilft die Suche weiter."
+
+#: template-parts/content-page.php:24 template-parts/content-school.php:112
+#: template-parts/content-school.php:134 template-parts/content-staff.php:75
+#: template-parts/content-staff.php:97 template-parts/content.php:51
+#: template-parts/content.php:73
+msgid "Pages:"
+msgstr "Seiten:"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content-school.php:42 template-parts/content-school.php:123
+#: template-parts/content-staff.php:42 template-parts/content-staff.php:86
+#: template-parts/content.php:40 template-parts/content.php:62
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "<span class=\"screen-reader-text\"> \"%s\"</span> weiterlesen"
+
+#. Name of the theme
+msgid "JaS"
+msgstr "JaS"
+
+#. Description of the theme
+msgid "Description"
+msgstr ""
+
+#. URI of the theme
+msgid "https://jas-erlangen.de"
+msgstr ""
+
+#. Author of the theme
+msgid "Barbara Bothe"
+msgstr "Barbara Bothe"
+
+#. Author URI of the theme
+msgid "http://barbara-bothe.de"
+msgstr "http://barbara-bothe.de"

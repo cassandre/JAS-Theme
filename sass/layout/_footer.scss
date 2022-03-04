@@ -1,0 +1,42 @@
+.site-footer {
+  .site-info {
+    background: $color__jas_gelb;
+    color: #fff;
+    letter-spacing: .05em;
+    @include px2rem(14);
+    text-shadow: 1px 1px 1px #666;
+
+    a {
+      color: #fff;
+      text-shadow: none;
+    }
+  }
+  #sidebar-info-area,
+  #sidebar-footer {
+    @include site-width;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @media screen and (min-width: $screen-sm) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .widget {
+      @media screen and (min-width: $screen-sm) {
+        flex-basis: 48%;
+      }
+      @media screen and (min-width: $screen-md) {
+        //flex-basis: 30%;
+      }
+      @media screen and (min-width: $screen-lg) {
+        flex-basis: 23%;
+      }
+    }
+  }
+  #sidebar-footer {
+    justify-content: space-around;
+  }
+}
