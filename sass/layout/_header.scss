@@ -234,7 +234,8 @@
     //padding: 10px;
     color: #fff;
     border: 1px solid #fff;
-    font-size: px2rem(14);
+    font-size: px2rem(15);
+    text-shadow: 1px 1px 1px #000;
     @media screen and (min-width: $screen-xs) {
       width: 150px;
       //font-size: px2rem(16);
@@ -254,12 +255,21 @@
     }
     &.box-lila {
       background: $color__jas-lila;
+      &:hover, &:focus, &:active {
+        background: darken($color__jas-lila, 10%);
+      }
     }
     &.box-gelb {
-      background : $color__jas_gelb;
+      background : lighten($color__jas_gelb, 3%);
+      &:hover, &:focus, &:active {
+        background: $color__jas_gelb;
+      }
     }
     &.box-gruen {
       background: $color__jas-gruen;
+      &:hover, &:focus, &:active {
+        background: darken($color__jas-gruen, 5%);
+      }
     }
     a {
       display: block;
@@ -273,8 +283,8 @@
       &:hover, &:focus {
         color: #fff;
         @media screen and (min-width: $screen-xs) {
-          font-size: 1.1em;
-          line-height: 1;
+          //font-size: 1.1em;
+          //line-height: 1;
         }
       }
     }
