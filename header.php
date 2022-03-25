@@ -38,6 +38,13 @@
                 ) );
                 ?>
             </nav><!-- #site-navigation -->
+            <?php
+            /*if (is_active_sidebar('language-switcher')) {
+                echo '<div id="lang-switch-wrapper" class="lang-switch-wrapper"><button class="lang-switch-toggle" aria-expanded="false">' . __('Language Switcher') . '</button>';
+                dynamic_sidebar('language-switcher');
+                echo '</div>';
+            }*/
+            ?>
         </div>
 
         <div class="banner">
@@ -67,6 +74,13 @@
                 <?php dynamic_sidebar( 'front-page-boxes' ); ?>
             </aside>
         <?php endif; ?>
+        <?php
+        if (is_active_sidebar('language-switcher')) {
+            echo '<div id="lang-switch-wrapper" class="lang-switch-wrapper"><button class="lang-switch-toggle" aria-expanded="false">' . __('Language Switcher') . '</button>';
+            dynamic_sidebar('language-switcher');
+            echo '</div>';
+        }
+        ?>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

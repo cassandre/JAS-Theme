@@ -5,7 +5,7 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-	var container, button, menu, links, i, len;
+	let container, button, menu, links, i, len;
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
@@ -103,4 +103,41 @@
 			}
 		}
 	}( container ) );
+
+	/*
+	 * Language Switcher
+	 */
+	let langContainer = document.getElementById( 'lang-switch-wrapper' );
+	let langButton = langContainer.getElementsByTagName( 'button' )[0];
+	if ( 'undefined' === typeof langButton ) {
+		return;
+	}
+	let langMenu = langContainer.getElementsByTagName( 'ul' )[0];
+	if ( 'undefined' === typeof langMenu ) {
+		langButton.style.display = 'none';
+		return;
+	}
+
+	langMenu.setAttribute( 'aria-expanded', 'false' );
+	//if ( -1 === langMenu.className.indexOf( 'nav-menu' ) ) {
+		//langMenu.className += ' nav-menu';
+	//}
+
+	langButton.onclick = function() {
+		if ( -1 !== langContainer.className.indexOf( 'toggled' ) ) {
+			langContainer.className = langContainer.className.replace( ' toggled', '' );
+			langButton.setAttribute( 'aria-expanded', 'false' );
+			langMenu.setAttribute( 'aria-expanded', 'false' );
+		} else {
+			langContainer.className += ' toggled';
+			langButton.setAttribute( 'aria-expanded', 'true' );
+			langMenu.setAttribute( 'aria-expanded', 'true' );
+		}
+	};
+
+	// Hide Translation Button if no translation provided
+	let langDiv = langContainer.querySelectorAll('div.notranslation');
+	if (langDiv.length === 0) {
+		langButton.style.display = 'block';
+	}
 } )();

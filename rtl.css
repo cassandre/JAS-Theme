@@ -1,17 +1,1 @@
-/*
-Theme Name: JaS
-
-Adding support for languages written in a Right To Left (RTL) direction is easy -
-it's just a matter of overwriting all the horizontal positioning attributes
-of your CSS stylesheet in a separate stylesheet file named rtl.css.
-
-https://codex.wordpress.org/Right-to-Left_Language_Support
-
-*/
-
-/*
-body {
-	direction: rtl;
-	unicode-bidi: embed;
-}
-*/
+body{direction:rtl;unicode-bidi:embed}.entry-title:before,.page-title:before{right:0;left:auto}/*# sourceMappingURL=rtl.css.map */

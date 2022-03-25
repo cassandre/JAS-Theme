@@ -1,0 +1,80 @@
+/*
+ * RRZE-Multilang
+ */
+.rrze-multilang {
+    .notranslation {
+        display: none;
+    }
+    ul {
+        display: none;
+        position: absolute;
+        top: 45px;
+        right: 0;
+        border: 2px solid $color__jas_gelb;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+        padding-left: 0;
+        margin: 0;
+        background: #fff;
+        z-index: 1;
+        li {
+            list-style-type: none;
+            a {
+                display: block;
+                padding: .5em 1em;
+                text-align: right;
+                &:hover, &:focus {
+                    background-color: lighten($color__jas_gelb, 50%);
+                }
+            }
+        }
+    }
+}
+
+#lang-switch-wrapper {
+    position: absolute;
+    right: 0;
+    //top: 8px;
+    @media screen and (min-width: $screen-md) {
+        right: 5vw;
+    }
+    @media screen and (min-width: $screen-lg) {
+        right: 10vw;
+    }
+    @media screen and (min-width: $screen-xl) {
+        right: 15vw;
+    }
+    &.toggled {
+        ul {
+            display: block;
+        }
+    }
+    .lang-switch-toggle {
+        display: none;
+        //margin-top: .5rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        //float: right;
+        //align-self: flex-end;
+        width: 70px;
+        height: 50px;
+        padding: 0;
+        margin: 0 0 6px;
+        overflow: hidden;
+        color: $color__jas-gruen;
+        background-color: #fff;
+        border: none;
+        border-radius: 0;
+        cursor: pointer;
+        z-index: 1;
+        &:before {
+            @extend .fas;
+            @extend .fa-language;
+            @extend .fa-4x;
+        }
+        &:after {
+            @include clearfix;
+            @include clearfix-after;
+        }
+    }
+}

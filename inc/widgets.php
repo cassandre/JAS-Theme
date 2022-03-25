@@ -41,6 +41,16 @@ function jas_widgets_init() {
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ));
+    if (apply_filters('rrze_multilang_widget_enabled', false)) {
+        register_sidebar( array(
+            'name' => __( 'Language Switcher', 'jas' ),
+            'id' => 'language-switcher',
+            'description' => __( 'Language Switcher in Site Header', 'jas' ),
+            'before_widget' => '<div class="header-widget rrze-multilang-widget">',
+            'after_widget' => '</div>',
+
+        ) );
+    }
 
     register_widget("JaS_Front_Page_Boxes");
 }
